@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*start header*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #8b5a2b;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #8b5a2b;
+}
+.nav-icons {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.nav-icons a {
+  color: #333;
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cart-icon:hover {
+  color: #8b5a2b; 
+}
+/* end of header */ 
+
+/* start basic style */
+
+.details-container{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    box-shadow: 0 1px 5px rgba(0, 0, 0);
+}
+/* end basic style */
+
+/* columns */
+.left-column{
+    width: 60%;
+    position: relative;
+}
+
+.right-column{
+    width: 40%;
+    margin-top: 60px;
+}
+
+/* left column */
+
+.left-column img {
+    width: 100%;
+    position: absolute;
+    left: -30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    max-height: 100%;
+}
+.left-column img.active {
+    opacity: 1;
+}
+
+/* right column */
+.product-description{
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+
+.product-description h1{
+     font-weight: 300;
+     font-size: 52px;
+     color: #43484D;
+     letter-spacing: -2px;
+}
+
+.product-description p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+}
+
+/* Product Color */
+.product-color {
+    margin-bottom: 30px;
+  }
+   
+  .color-choose div {
+    display: inline-block;
+  }
+   
+  .color-choose input[type="radio"] {
+    display: none;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+   
+  .color-choose input[type="radio"]#High-waisted-Dark-grey + label span {
+    background-color: #3b3b3b;
+  }
+  .color-choose input[type="radio"]#High-waisted-Denim-blue + label span {
+    background-color: #98b1c8;
+  }
+  .color-choose input[type="radio"]#High-waisted-light-denim-blue + label span {
+    background-color: #79BAEC;
+  }
+  .color-choose input[type="radio"]#coat-grey + label span {
+    background-color: grey;
+  }
+  .color-choose input[type="radio"]#Chunky-black + label span {
+    background-color: black;
+  }
+  .color-choose input[type="radio"]#Chunky-brown + label span {
+    background-color: #5C4033;
+  }
+  .color-choose input[type="radio"]#cap-black + label span {
+    background-color: black;
+  }
+  .color-choose input[type="radio"]#cap-beige + label span {
+    background-color: rgb(147, 131, 104);
+  }
+  
+  .color-choose input[type="radio"]#Fit-Double-breasted-jacket-Light-beige + label span {
+    background-color: rgb(210, 203, 190);
+  }
+  .color-choose input[type="radio"]#Rib-knit-T-shirt-dark-brown + label span {
+    background-color: rgb(47, 38, 37);
+  }
+  .color-choose input[type="radio"]#Rib-knit-T-shirt-turquoise + label span {
+    background-color: rgb(114, 144, 145);
+  }
+  .color-choose input[type="radio"]#Fit-Suit-trousers-light-beige + label span {
+    background-color: rgb(225, 218, 207);
+  }
+  .color-choose input[type="radio"]#Slim-Fit-Trousers-black+ label span {
+    background-color: black;
+  }
+  .color-choose input[type="radio"]#Slim-Fit-Trousers-dark-brown + label span {
+    background-color: rgb(101, 91, 85);
+  }
+  .color-choose input[type="radio"]#Slim-Fit-Jeans-black + label span {
+    background-color: black;
+  }
+  .color-choose input[type="radio"]#Slim-Fit-Jeans-light-blue + label span {
+    background-color: rgb(187, 202, 199);
+  }
+  .color-choose input[type="radio"]#Super-Baggy-Denim-shorts-Denim-blue + label span {
+    background-color: rgb(70, 78, 87);
+  }
+  .color-choose input[type="radio"]#Fitted-jacket-black + label span {
+    background-color: black;
+  }
+  .color-choose input[type="radio"]#Fitted-jacket-white + label span {
+    background-color: white;
+  }
+  .color-choose input[type="radio"]#Belted-twill-trousers-light-beige + label span {
+    background-color: rgb(198, 194, 186);
+  }
+
+  .color-choose input[type="radio"]#Wide-linen-blend-trousers-greige+ label span {
+    background-color: rgb(123, 109, 96);
+  }
+
+  .color-choose input[type="radio"]#Wide-linen-blend-trousers-grey-marl+ label span {
+    background-color: rgb(201, 198, 199);
+  }
+
+  .color-choose input[type="radio"]#Wide-linen-blend-trousers-light-beige+ label span {
+    background-color: rgb(228, 223, 211);
+  }
+
+  .color-choose input[type="radio"]#Wide-linen-blend-trousers-white+ label span {
+    background-color: white;
+  }
+
+  .color-choose input[type="radio"]#top-dark-pink+ label span {
+    background-color: rgb(150, 66, 92);
+  }
+  .color-choose input[type="radio"]#top-light-dusty-green+ label span {
+    background-color: rgb(203, 204, 183);
+  }
+  .color-choose input[type="radio"]#top-cream+ label span {
+    background-color: rgb(246, 246, 244);
+  }
+  .color-choose input[type="radio"]#Tiered-maxi-dress-brown + label span {
+    background-color: brown;
+  }
+  .color-choose input[type="radio"]#Napped-tote-bag + label span {
+    background-color: rgb(79, 69, 70);
+  }
+  .color-choose input[type="radio"]#Small-shoulder-bag + label span {
+    background-color: rgb(184, 131, 90);
+  }
+  .color-choose input[type="radio"]#Chunky-ankle-boots + label span {
+    background-color: black;
+  }
+
+
+
+  .size-choose {
+    margin-bottom: 25px;
+  }
+   
+  .size-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 8px;
+    padding: 13px 40px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+   
+  .size-choose button:hover,
+  .size-choose button:active,
+  .size-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+   
+  .size {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+   
+  .size a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+   
+  .size a:before {
+    content: "?";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+  }
+   
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+   
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: black;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: #8b5a2b;
+  }
+
+  .qty-input {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  }
+  
+  .qty-count {
+    background-color: white;
+    color: #5E6977;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  
+  .product-qty {
+    width: 40px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .product-qty::-webkit-inner-spin-button,
+  .product-qty::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+
+  
+
+/* start footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #8b5a2b;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #8b5a2b;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #bbb;
+    font-size: 14px;
+}
+/* End footer */

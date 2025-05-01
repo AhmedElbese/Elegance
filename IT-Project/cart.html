@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+<div class="container my-5">
+  <h2>Cart (<span id="item-count">0</span> items)</h2>
+  <div class="row">
+    <div class="col-lg-8" id="cart-items">
+      <img src="../images/img/WhatsApp Image 2025-04-27 at 23.43.04_bab880cb.jpg" alt="">
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card p-3 mb-3">
+        <h5>The Total Amount Of</h5>
+        <div class="d-flex justify-content-between">
+          <span>Product amount</span>
+          <span>$<span id="product-amount">0</span></span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span>Shipping Charge</span>
+          <span>$<span id="shipping-charge">50</span></span>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between fw-bold">
+          <span>The total amount of (including VAT)</span>
+          <span>$<span id="total-amount">0</span></span>
+        </div><a href="./checkout.html">
+          <button class="btn btn-primary w-100 mt-3" id="checkout-btn" >Checkout</button>
+        </a>
+        
+      </div>
+
+      <div class="card p-3 mb-3">
+        <h6>Add a discount code (optional)</h6>
+        <div class="input-group">
+          <input type="text" id="discount-code" class="form-control" placeholder="Enter code">
+          <button class="btn btn-primary" id="apply-discount">Apply</button>
+        </div>
+        <small id="discount-msg" class="text-success mt-2 d-block"></small>
+      </div>
+
+      <div class="card p-3">
+        <h6>Expected delivery date</h6>
+        <p>July 27th 2025 - July 29th 2025</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../javascript/cart.js"></script>
+</body>
+</html>
