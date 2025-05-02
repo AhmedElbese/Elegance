@@ -15,7 +15,7 @@ let products = [
     size: "M",
     price: 45,
     quantity: 3,
-    image: "images/img/WhatsApp Image 2025-04-27 at 23.43.04_bab880cb.jpg" 
+    image: "../images/img/WhatsApp Image 2025-04-27 at 23.43.04_bab880cb.jpg" 
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ let products = [
     size: "M",
     price: 30,
     quantity: 2,
-    image: "images/img/WhatsApp Image 2025-04-27 at 23.43.05_2bf7acd0.jpg" 
+    image: "../images/img/WhatsApp Image 2025-04-27 at 23.43.05_2bf7acd0.jpg" 
   }
 ];
 
