@@ -1,11 +1,21 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+document.addEventListener('DOMContentLoaded', function() {
+    const loginTab = document.getElementById('loginTab');
+    const registerTab = document.getElementById('registerTab');
+    const loginForm = document.querySelector('.login-form');
+    const registerForm = document.querySelector('.register-form');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+    loginTab.addEventListener('click', () => {
+        loginTab.classList.add('active');
+        registerTab.classList.remove('active');
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+    });
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    registerTab.addEventListener('click', () => {
+        registerTab.classList.add('active');
+        loginTab.classList.remove('active');
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+    });
+
 });

@@ -3,107 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegance - Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Login - Elegance Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <a href="../index.html" class="back-to-home">
-        <i class="fas fa-home"></i> 
-    </a>
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">ELEG<span>ANCE</span></a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./products.html#mens">Men's</a></li>
+                <li><a href="./products.html#womens">Women's</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <div class="main-content">
-        <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="#">
-                    <h1>Create Account</h1>
-                    <div class="social-container">
-                        <a href="www.facebook.com" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="www.google.com" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="www.linkedin.com" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your email for registration</span>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button>Sign Up</button>
-                </form>
-            </div>
-            <div class="form-container sign-in-container">
-                <form action="#">
-                    <h1>Sign in</h1>
-                    <div class="social-container">
-                        <a href="www.facebook.com" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="www.google.com" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="www.linkedin.com" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your account</span>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <a>Forgot your password?</a>
-                    <button>Sign In</button>
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn">Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Enter your personal details and start journey with us</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
-                    </div>
+<div class="container">
+    <div class="forms-container">
+        <div class="tabs">
+            <button id="loginTab" class="tab active">Sign In</button>
+            <button id="registerTab" class="tab">Create Account</button>
+        </div>
+
+        <div class="form-container login-form">
+            <h2>Welcome Back</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit">Sign In</button>
+                <div class="form-footer">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </form>
+
+            <div class="social-login">
+                <p>Or sign in with</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+        </div>
+
+        <div class="form-container register-form hidden">
+            <h2>Create Your Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" required placeholder="Confirm your password">
+                </div>
+                <button type="submit">Register Now</button>
+                <div class="form-footer">
+                    Already have an account? <a href="#" id="switchToLogin">Sign in</a>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <footer>
-        <div class="footercontainer">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>About Elegance</h3>
-                    <p style="color: #bbb; line-height: 1.6;">Elegance — Not Just a Brand, But a Legacy of Refined Grace, Designed for the Discerning and the Dreamers.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./products.html#mens">Men's</a></li>
-                        <li><a href="./products.html#womens">Women's</a></li>
-                        <li><a href="../IT-Project/about.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>Mall Of Egypt</li>
-                        <li>Al Wahat Road, First Section</li>
-                        <li>6th of October City</li>
-                        <li> Giza, Egypt</li>
-                        <li>info@elegance.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Elegance. All rights reserved.
-            </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About Elegance</h3>
+            <p>Elegance is a premium clothing brand dedicated to creating timeless pieces that combine quality craftsmanship with modern design.</p>
         </div>
-    </footer>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html#mens">Men's</a></li>
+                <li><a href="products.html#womens">Women's</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> شارع محمود خاطر</li>
+                <li><i class="fas fa-city"></i> القاهرة حلوان</li>
+                <li><i class="fas fa-envelope"></i> info@elegance.com</li>
+                <li><i class="fas fa-phone"></i> +20 123 456 7890</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2025 Elegance. All rights reserved.
+    </div>
+</footer>
 
-    <script src="../javascript/login.js"></script>
+<script src="../javascript/login.js"></script>
 </body>
 </html>
