@@ -89,7 +89,6 @@ nav ul li a:hover {
     color: #8b5a2b; 
 }
 
-/* Payment Page Specific Styles */
 .main-container {
     padding: 50px 0;
     min-height: calc(100vh - 300px);
@@ -293,7 +292,6 @@ input:focus {
     margin-top: 20px;
 }
 
-/* Footer Styles - Exactly from your home page */
 footer {
     background-color: #222;
     color: #fff;
