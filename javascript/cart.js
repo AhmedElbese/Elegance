@@ -1,28 +1,21 @@
-// قراءة بيانات المنتج من localStorage
 const product = JSON.parse(localStorage.getItem("cartItem"));
 
-// عنصر عرض المنتجات
 const cartItemsContainer = document.getElementById("cart-items");
 
-// العناصر المالية
 const itemCount = document.getElementById("item-count");
 const productAmount = document.getElementById("product-amount");
 const totalAmount = document.getElementById("total-amount");
-const shippingCharge = 50; // ثابت
+const shippingCharge = 50; 
 
 if (product) {
-  // عدد العناصر
   itemCount.textContent = product.quantity;
 
-  // إجمالي السعر بدون شحن
   const subtotal = product.price * product.quantity;
   productAmount.textContent = subtotal.toFixed(2);
 
-  // المجموع مع الشحن
   const total = subtotal + shippingCharge;
   totalAmount.textContent = total.toFixed(2);
 
-  // عرض المنتج داخل الكارت
   cartItemsContainer.innerHTML = `
     <div class="card mb-3">
       <div class="row g-0">

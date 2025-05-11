@@ -71,6 +71,23 @@ nav ul li a {
 nav ul li a:hover {
     color: #8b5a2b;
 }
+.nav-icons {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.nav-icons a {
+    color: #333;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cart-icon:hover {
+    color: #8b5a2b; 
+}
 
 .background {
     background-image: url('../images/89f45c02_bb65.avif');

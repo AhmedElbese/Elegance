@@ -1,16 +1,12 @@
 $(document).ready(function() {
-    // تغيير الصورة بناءً على اللون المحدد
     $('.color-choose input').on('click', function() {
         var selectedColor = $(this).attr('data-image');
         
-        // إزالة الكلاس active من الصور الأخرى
         $('.left-column img').removeClass('active');
         
-        // إضافة الكلاس active للصورة المحددة
         $('.left-column img[data-image="' + selectedColor + '"]').addClass('active');
     });
 
-    // التعامل مع اختيار الكمية (quantity)
     var QtyInput = (function () {
         var $qtyInputs = $(".qty-input");
 
@@ -23,7 +19,6 @@ $(document).ready(function() {
         var qtyMin = parseInt($inputs.attr("min"));
         var qtyMax = parseInt($inputs.attr("max"));
 
-        // التحقق من الكمية المدخلة
         $inputs.change(function () {
             var $this = $(this);
             var $minusBtn = $this.siblings(".qty-count--minus");
@@ -46,7 +41,6 @@ $(document).ready(function() {
             }
         });
 
-        // التعامل مع الضغط على أزرار (+) و (-)
         $countBtn.click(function () {
             var operator = this.dataset.action;
             var $this = $(this);
@@ -78,18 +72,15 @@ $(document).ready(function() {
         });
     })();
 
-    // إضافة المنتج إلى السلة
     document.querySelector(".cart-btn").addEventListener("click", function (e) {
-        e.preventDefault(); // لمنع تحميل الصفحة عند الضغط
+        e.preventDefault(); 
 
-        // جلب بيانات المنتج
         const productName = document.querySelector(".product-description h1").innerText;
         const productPriceText = document.querySelector(".product-price span").innerText;
         const productPrice = parseFloat(productPriceText.replace("EGP", "").replace(",", "").trim());
         const productQty = parseInt(document.querySelector(".product-qty").value);
         const productImage = document.querySelector(".left-column img.active").getAttribute("src");
 
-        // إنشاء كائن يمثل المنتج
         const product = {
             name: productName,
             price: productPrice,
@@ -97,10 +88,8 @@ $(document).ready(function() {
             image: productImage
         };
 
-        // تخزينه في localStorage (يمكنك لاحقًا دعم أكثر من منتج باستخدام مصفوفة)
         localStorage.setItem("cartItem", JSON.stringify(product));
 
-        // الانتقال إلى صفحة السلة
         window.location.href = "../IT-Project/cart.html";
     });
 });

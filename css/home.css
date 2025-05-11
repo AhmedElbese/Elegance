@@ -209,12 +209,6 @@ nav ul li a:hover {
     margin: 15px auto 0;
 }
 
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
-    max-width: 800px 800px;
-}
 
 .category-section {
     padding: 50px 0;
@@ -273,8 +267,8 @@ nav ul li a:hover {
     flex: 0 0 auto;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ظل أنيق */
-    border: 1px solid #ddd; /* تحديد خفيف للحافة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    border: 1px solid #ddd;
     overflow: hidden;
     scroll-snap-align: start;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -288,7 +282,7 @@ nav ul li a:hover {
     display: block;
 }
 #auto-carousel {
-    overflow: hidden; /* إخفاء شريط السكروول */
+    overflow: hidden; 
 }
 
 
